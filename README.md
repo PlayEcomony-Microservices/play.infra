@@ -16,3 +16,9 @@ dotnet nuget add source --username USERNAME --password $gh_pat --store-password-
 $appname="playeconomy"
 az group create --name $appname --location eastus
 ```
+
+## Create the Cosmos DB account
+
+```powershell
+az cosmosdb create --name $appname --resource-group $appname --kind MongoDB --enable-free-tier
+```
