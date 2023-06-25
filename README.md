@@ -50,3 +50,10 @@ az aks create -n $appname -g $appname --node-vm-size Standard_B2s --node-count 2
 
 az aks get-credentials --name $appname --resource-group $appname
 ```
+
+## Create the Azure Key Vault
+
+```powershell
+$vaultName="playeconomybkm"
+az keyvault create -n $vaultName -g $appname
+```
